@@ -215,7 +215,10 @@ sales-order-analytics-excel/
 ├── Orders_PowerQuery_Practice.xlsx
 │
 └── assets/
+    ├── power_query_workflow.png
+    ├── queries_connections_overview.png
     ├── revenue_by_category.png
     ├── monthly_revenue_trend.png
+    ├── monthly_revenue_ordercount_combo.png
     ├── revenue_discount_combo.png
     └── sparklines.png
