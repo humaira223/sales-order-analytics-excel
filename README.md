@@ -1,201 +1,198 @@
-Sales & Order Analytics — Microsoft Excel
+# Sales & Order Analytics — Microsoft Excel
 
-Project Overview
+## Project Overview
 
-This project demonstrates an end-to-end Excel data analytics workflow using a deliberately messy retail sales-order dataset. The goal was to take raw transactional data through data auditing, cleaning, transformation, validation, analysis, visualization, and refresh automation using Microsoft Excel and Power Query.
+This project demonstrates an end-to-end **sales and order analytics workflow in Microsoft Excel**, covering data cleaning, transformation, validation, analysis, automation, and visualization.
 
-The original dataset contained 244 rows and 15 columns covering orders across regions, product categories, sales channels, payment methods, sales representatives, and order statuses. Additional test rows were later added to validate the refresh process and confirm that the transformation logic re-runs correctly on new data.
+The project was built using a deliberately messy transactional sales dataset and focuses on converting raw data into a clean, analysis-ready format using **Excel formulas, Power Query, PivotTables, PivotCharts, and data-quality checks**.
 
-Tools & Techniques
+---
 
-Microsoft Excel 2022
+## Tools & Skills Used
 
-Excel Tables and structured references
+- Microsoft Excel 2022
+- Power Query
+- Excel Tables & Structured References
+- PivotTables
+- PivotCharts
+- Data Validation
+- Conditional Formatting
+- Advanced Excel Formulas
+- Charts & Sparklines
 
-Power Query
+---
 
-PivotTables and PivotCharts
+## Key Concepts Applied
 
-Data Validation and Conditional Formatting
+### Data Cleaning & Preparation
 
-Advanced Excel formulas
+Cleaned and standardized inconsistent transactional data including:
 
-Charts and Sparklines
+- Customer names
+- Regions
+- Product categories
+- Sales channels
+- Payment methods
+- Order statuses
+- Dates
+- Quantity
+- Unit Price
+- Discounts
+- Notes
 
-Key Excel Concepts Applied
+Functions used included:
 
-Data Auditing & Cleaning
+`TRIM`, `CLEAN`, `PROPER`, `SUBSTITUTE`, `VALUE`, `TEXT`, `EOMONTH`
 
-Audited raw data using COUNTA, COUNTBLANK, filters, and duplicate checks.
+Additional calculated fields were created for:
 
-Standardized customer names, regions, categories, channels, payment methods, order statuses, and notes.
+- Cleaned dates
+- Month labels
+- Revenue
+- High-value order flags
+- Normalized discounts
+- Order keys and helper fields
 
-Used functions such as TRIM, CLEAN, PROPER, SUBSTITUTE, VALUE, TEXT, and date functions.
+---
 
-Converted inconsistent dates, quantities, prices, and discounts into analysis-ready formats.
+## Advanced Excel Formulas
 
-Created helper fields including cleaned categories, cleaned dates, month labels, revenue, high-value flags, and normalized discount values.
+Applied formulas for business analysis and data validation, including:
 
-Formula-Based Analysis
+- `XLOOKUP`
+- `VLOOKUP`
+- `IF`
+- `IFERROR`
+- `SUMIFS`
+- `COUNTIFS`
+- `MAXIFS`
+- `FILTER`
+- `UNIQUE`
+- `SORT`
+- `EOMONTH`
 
-Applied:
+These were used for multi-condition analysis, lookups, latest-order identification, dynamic filtering, and revenue calculations.
 
-XLOOKUP
+---
 
-VLOOKUP
+## Power Query ETL Workflow
 
-IF / IFERROR
+Built a reusable Power Query transformation process including:
 
-SUMIFS
+- Data type correction
+- Trim and Clean transformations
+- Capitalization and standardization
+- Null handling
+- Date normalization
+- Duplicate identification and removal
+- Custom calculated columns
 
-COUNTIFS
+### Merge
 
-MAXIFS
+Merged the Orders dataset with a regional target table using a **Left Outer Join** to add `MonthlyTarget`.
 
-FILTER
+### Append
 
-UNIQUE
+Combined Online and In-Store order queries vertically using **Append Queries**.
 
-SORT
+### Unpivot
 
-EOMONTH
+Converted wide monthly data into a tidy format using **Unpivot Columns**.
 
-These were used for lookups, conditional calculations, multi-criteria analysis, latest-order identification, dynamic filtering, and monthly reporting.
+### Group By
 
-Power Query ETL
+Created aggregated summaries such as:
 
-Built a reusable transformation workflow including:
+- Total Revenue by Category
+- Order Count by Category
+- Revenue by Channel and Order Status
 
-Data type correction
+### Refresh Automation
 
-Trim / Clean / capitalization
+Tested the complete refresh cycle by adding deliberately messy new records to the source data and using **Refresh All** to automatically reapply all Power Query transformation steps.
 
-Standardization using Replace Values
+---
 
-Null handling
-
-Date normalization
-
-Duplicate identification and removal
-
-Merge with regional target data using a Left Outer Join
-
-Append of Online and In-Store order queries
-
-Unpivot of wide monthly data into a tidy format
-
-Group By for category and channel/status summaries
-
-Custom calculated fields such as Revenue and Percent of Target
-
-Load-to-Excel and automated refresh testing
-
-A full refresh cycle was tested by adding deliberately messy new source rows and confirming that Power Query automatically re-applied the cleaning and transformation steps.
-
-PivotTables & Business Analysis
+## PivotTable Analysis
 
 Created PivotTables to analyze:
 
-Revenue by Category and Channel
+- Revenue by Category
+- Revenue by Channel
+- Regional performance
+- SalesRep performance
+- Payment Method performance
+- Order Status distribution
+- Monthly Revenue trends
+- Average Order Value
+- Average Discount by Category
+- Region × Category Revenue
 
-Regional order count and average order value
+---
 
-Payment-method performance
+## Data Quality & Validation
 
-Monthly revenue trends
+Implemented multiple quality-control checks including:
 
-SalesRep performance
+- Raw vs cleaned row-count reconciliation
+- Blank Quantity checks
+- Blank Unit Price checks
+- Distinct Region checks
+- Distinct Order Status checks
+- Duplicate identification
+- Data Validation dropdowns
+- Manual verification of calculated results
 
-Order-status distribution
+This ensured that automated analysis was supported by proper data-quality controls.
 
-Region-by-Category revenue
+---
 
-Average discount by category
+## Data Visualization
 
-Data Quality & Validation
+Created multiple Excel visualizations including:
 
-Implemented:
+- Clustered Column Charts
+- Line Charts
+- Horizontal Bar Charts
+- Interactive PivotCharts
+- Combo Charts
+- Secondary Axis Charts
+- SalesRep Sparklines
+- Category Sparklines
 
-Raw vs cleaned row-count reconciliation
+Charts were formatted using clear titles, axis labels, legends, sorting, and simplified business-reporting styles.
 
-Blank Quantity and UnitPrice checks
+---
 
-Distinct Region and Order Status checks
+## Business Analysis Performed
 
-Data Validation lists for controlled Region entry
+The project enabled analysis of:
 
-Manual cross-checks of automated calculations
+- Revenue performance by product category
+- Regional sales performance
+- Online vs In-Store performance
+- SalesRep contribution
+- Order Status distribution
+- Monthly sales trends
+- Payment Method performance
+- Discount patterns
+- Regional target contribution
+- High-value orders
 
-Validation of Power Query refresh outputs
+---
 
-Data Visualization
+## Project Files
 
-Created:
-
-Clustered Column Charts
-
-Line Charts
-
-Interactive PivotCharts
-
-Horizontal Bar Charts
-
-Combo Charts with a Secondary Axis
-
-SalesRep and Category Sparklines
-
-Charts were formatted for readability using meaningful titles, axis labels, legends, sorting, field-button cleanup, and simple professional styles.
-
-Repository Files
-
+```text
 sales-order-analytics-excel/
 │
 ├── README.md
-├── excel/
-│   ├── Orders_Working.xlsx
-│   └── Orders_PowerQuery_Practice.xlsx
+│
+├── Orders_Working.xlsx
+├── Orders_PowerQuery_Practice.xlsx
 │
 └── assets/
     ├── revenue_by_category.png
     ├── monthly_revenue_trend.png
     ├── revenue_discount_combo.png
     └── sparklines.png
-
-File Description
-
-Orders_Working.xlsx
-Main Excel analysis workbook containing formula-based cleaning, helper columns, advanced formulas, PivotTables, PivotCharts, charts, QA checks, and Sparklines.
-
-Orders_PowerQuery_Practice.xlsx
-Power Query workbook containing the repeatable ETL workflow, including cleaning, duplicate handling, Merge, Append, Unpivot, Group By, custom columns, loading, and refresh validation.
-
-assets/
-Recommended screenshots of key outputs so the project can be reviewed directly on GitHub without downloading the Excel files.
-
-How to Review the Project
-
-Read this README for an overview of the workflow and skills demonstrated.
-
-Review the screenshots in the assets folder for quick visual examples.
-
-Download and open the Excel workbooks in Microsoft Excel to inspect formulas, PivotTables, charts, and Power Query queries.
-
-For the Power Query workbook, use Data → Queries & Connections to inspect the saved transformation steps.
-
-Power Query functionality is best reviewed in the desktop version of Microsoft Excel.
-
-Key Learning Outcomes
-
-This project demonstrates the ability to:
-
-Transform messy transactional data into analysis-ready data.
-
-Build repeatable Excel and Power Query workflows instead of relying on one-time manual cleaning.
-
-Apply advanced formulas to answer business questions.
-
-Create PivotTables and interactive visualizations for management reporting.
-
-Validate outputs using structured data-quality checks.
-
-Automate recurring data preparation through Power Query refresh.
