@@ -181,6 +181,29 @@ The project enabled analysis of:
 
 ---
 
+## Project Preview
+
+### Power Query ETL Workflow
+![Power Query Workflow](assets/power_query_workflow.png)
+
+### Query Architecture
+![Queries and Connections](assets/queries_connections_overview.png)
+
+### Revenue by Category
+![Revenue by Category](assets/revenue_by_category.png)
+
+### Monthly Revenue Trend
+![Monthly Revenue Trend](assets/monthly_revenue_trend.png)
+
+### Revenue vs Order Count
+![Revenue vs Order Count](assets/monthly_revenue_ordercount_combo.png)
+
+### Revenue vs Average Discount
+![Revenue vs Average Discount](assets/revenue_discount_combo.png)
+
+### SalesRep Sparklines
+![SalesRep Sparklines](assets/sparklines.png)
+
 ## Project Files
 
 ```text
